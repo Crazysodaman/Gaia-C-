@@ -37,29 +37,30 @@ B (24,23,22),(5,4,3),(18,17,16)
   int gbf[3] = {22, 3, 16}; // Gait B Servo Feet
 }; */
 
-Struct name {
-  int servo;
+Struct servo {
+  int srvo;
   int center;
   int smax;
   int smin;
   char grp;
+  bool wkng;
 }FRH, FLH, FRT, FLT, FRFT, FLFT, CRH, CLH, CRT, CLT, CRFT, CLFT, BRH, BLH, BRT, BLT, BRFT, BLFT;
 
-FRH.servo = 8;
-FLH.servo = 24;
-FRT.servo = 7;
-FLT.servo = 23;
-FRFT.servo = 6;
-FLFT.servo = 22;
-CRH.servo = 5;
-CLH.servo = 21;
-CRT.servo = 4;
-CLT.servo = 20;
-CRFT.servo = 3;
-CLFT.servo = 19;
-BRH.servo = 2;
-BLH.servo = 18;
-BRT.servo = 1;
-BLT.servo = 17;
-BRFT.servo = 0;
-BLFT.servo = 16;
+struct servo FRH {8, 1500, 2000, 750, "A", true};
+struct servo FLH {24, 1500, 2000, 750, "B", true};
+struct servo FRT {7, 1500, 2000, 750, "A", true};
+struct servo FLT {23, 1500, 2000, 750, "B", true};
+struct servo FRFT {6, 1500, 2000, 750, "A", true};
+struct servo FLFT {22, 1500, 2000, 750, "B", true};
+struct servo CRH {5, 1500, 2000, 750, "B", true};
+struct servo CLH {21, 1500, 2000, 750, "A", true};
+struct servo CRT {4, 1500, 2000, 750, "B", true};
+struct servo CLT {20, 1500, 2000, 750, "A", true};
+struct servo CRFT {3, 1500, 2000, 750, "B", true};
+struct servo CLFT {19, 1500, 2000, 750, "A", true};
+struct servo BRH {2, 1500, 2000, 750, "A", true};
+struct servo BLH {18, 1500, 2000, 750, "B", true};
+struct servo BRT {1, 1500, 2000, 750, "A", true};
+struct servo BLT {17, 1500, 2000, 750, "B", true};
+struct servo BRFT {0, 1500, 2000, 750, "A", true};
+struct servo BLFT {16, 1500, 2000, 750, "B"};
