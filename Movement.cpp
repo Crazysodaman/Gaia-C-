@@ -44,7 +44,7 @@ Struct servo {
   int smin;
   char grp;
   bool wkng;
-}FRH, FLH, FRT, FLT, FRFT, FLFT, CRH, CLH, CRT, CLT, CRFT, CLFT, BRH, BLH, BRT, BLT, BRFT, BLFT;
+};
 
 struct servo FRH {8, 1500, 2000, 750, "A", true};
 struct servo FLH {24, 1500, 2000, 750, "B", true};
