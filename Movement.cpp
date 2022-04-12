@@ -63,4 +63,4 @@ struct servo BLH {18, 1500, 2000, 750, "B", true};
 struct servo BRT {1, 1500, 2000, 750, "A", true};
 struct servo BLT {17, 1500, 2000, 750, "B", true};
 struct servo BRFT {0, 1500, 2000, 750, "A", true};
-struct servo BLFT {16, 1500, 2000, 750, "B"};
+struct servo BLFT {16, 1500, 2000, 750, "B", true};
