@@ -24,19 +24,6 @@ A (8,7,6),(21,20,19),(2,1,0)
 B (24,23,22),(5,4,3),(18,17,16) 
 */
 
-/* class Movement
-{
-  int FRH = 8, FLH = 24, FRT = 7, FLT= 23, FRFT = 6, FLFT = 22, CRH = 5, CLH = 21, CRT = 4, CLT = 20, CRFT = 3, CLFT = 19, BRH = 2, BLH = 18, BRT = 1, BLT = 17, BRFT = 0, BLFT = 16; // all servo individual 
-  int aspr[9] = {0, 1, 2, 3, 4, 5, 6, 7, 8};  // all servo positions right
-  int aspl[9] = {16, 17, 18, 19, 20, 21, 22, 23, 24};  // all servo positions left
-  int gah[3] = {2, 21, 8}; // Gait A Servo Hip
-  int gat[3] = {1, 20, 7}; // Gait A Servo Thigh
-  int gaf[3] = {0, 19, 6}; // Gait A Servo Feet
-  int gbh[3] = {24, 5, 18}; // Gait B Servo Hip
-  int gbt[3] = {23, 4, 17}; // Gait B Servo Thigh
-  int gbf[3] = {22, 3, 16}; // Gait B Servo Feet
-}; */
-
 struct servo {
   int srvo;
   int center;
