@@ -37,7 +37,7 @@ B (24,23,22),(5,4,3),(18,17,16)
   int gbf[3] = {22, 3, 16}; // Gait B Servo Feet
 }; */
 
-Struct servo {
+struct servo {
   int srvo;
   int center;
   int smax;
@@ -46,21 +46,21 @@ Struct servo {
   bool wkng;
 };
 
-struct servo FRH {8, 1500, 2000, 750, "A", true};
-struct servo FLH {24, 1500, 2000, 750, "B", true};
-struct servo FRT {7, 1500, 2000, 750, "A", true};
-struct servo FLT {23, 1500, 2000, 750, "B", true};
-struct servo FRFT {6, 1500, 2000, 750, "A", true};
-struct servo FLFT {22, 1500, 2000, 750, "B", true};
-struct servo CRH {5, 1500, 2000, 750, "B", true};
-struct servo CLH {21, 1500, 2000, 750, "A", true};
-struct servo CRT {4, 1500, 2000, 750, "B", true};
-struct servo CLT {20, 1500, 2000, 750, "A", true};
-struct servo CRFT {3, 1500, 2000, 750, "B", true};
-struct servo CLFT {19, 1500, 2000, 750, "A", true};
-struct servo BRH {2, 1500, 2000, 750, "A", true};
-struct servo BLH {18, 1500, 2000, 750, "B", true};
-struct servo BRT {1, 1500, 2000, 750, "A", true};
-struct servo BLT {17, 1500, 2000, 750, "B", true};
-struct servo BRFT {0, 1500, 2000, 750, "A", true};
-struct servo BLFT {16, 1500, 2000, 750, "B", true};
+struct servo FRH {8, 1500, 2000, 750, 'A', true};
+struct servo FLH {24, 1500, 2000, 750, 'B', true};
+struct servo FRT {7, 1500, 2000, 750, 'A', true};
+struct servo FLT {23, 1500, 2000, 750, 'B', true};
+struct servo FRFT {6, 1500, 2000, 750, 'A', true};
+struct servo FLFT {22, 1500, 2000, 750, 'B', true};
+struct servo CRH {5, 1500, 2000, 750, 'B', true};
+struct servo CLH {21, 1500, 2000, 750, 'A', true};
+struct servo CRT {4, 1500, 2000, 750, 'B', true};
+struct servo CLT {20, 1500, 2000, 750, 'A', true};
+struct servo CRFT {3, 1500, 2000, 750, 'B', true};
+struct servo CLFT {19, 1500, 2000, 750, 'A', true};
+struct servo BRH {2, 1500, 2000, 750, 'A', true};
+struct servo BLH {18, 1500, 2000, 750, 'B', true};
+struct servo BRT {1, 1500, 2000, 750, 'A', true};
+struct servo BLT {17, 1500, 2000, 750, 'B', true};
+struct servo BRFT {0, 1500, 2000, 750, 'A', true};
+struct servo BLFT {16, 1500, 2000, 750, 'B', true};
