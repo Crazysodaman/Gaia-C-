@@ -1,28 +1,9 @@
 #include <iostream>
 #include <string>
+#include <set>
 using namespace std;
-/*
-   Abb. for naming 
-  F- Front  H- Hip
-  C- Center T- Thigh
-  B- Back   FT- Foot
-  L- LefT   R- Right
- 
-  Servo and Numbers
-   FRH-8   FLH-24
-   FRT-7   FLT-23
-   FRFT-6  FLFT-22
-   CRH-5   CLH-21
-   CRT-4   CLT-20
-   CRFT-3  CLFT-19
-   BRH-2   BLH-18
-   BRT-1   BLT-17
-   BRFT-0  BLFT-16
-   
-      Leg Groups
-A (8,7,6),(21,20,19),(2,1,0)
-B (24,23,22),(5,4,3),(18,17,16) 
-*/
+
+
 
 struct servo {  //  sets struct for servo data
     int srvo;   //  servo number
@@ -31,6 +12,11 @@ struct servo {  //  sets struct for servo data
     int smin;   //  servo min postion
     char grp;   //  Gait group (A or B)
     bool wkng;  //  if the servo is working properly
+    
+     bool operator<(const servo&) const //not sure why this works but will look into it DO NOT REMOVE
+    {
+        return 0;
+    }
 };
 
 struct servo FRH {8, 1500, 2000, 750, 'A', true};
@@ -52,7 +38,21 @@ struct servo BLT {17, 1500, 2000, 750, 'B', true};
 struct servo BRFT {0, 1500, 2000, 750, 'A', true};
 struct servo BLFT {16, 1500, 2000, 750, 'B', true};
 
-class movement
+set <struct servo> Hp {FRH, FLH, CRH, CLH, BRH, BLH}; //Hip
+set <struct servo> Th {FRT, FLT, CRT, CLT, BRT, BLT}; // Thighs
+set <struct servo> Ft {FRFT, FLFT, CRFT, CLFT, BRFT, BLFT}; //Feet
+set <struct servo> Frt {FRH, FLH, FRT, FLT, FRFT, FLFT}; //Front
+set <struct servo> Ctr {CRH, CLH, CRT, CLT, CRFT, CLFT}; //Center
+set <struct servo> Bck {BRH, BLH, BRT, BLT, BRFT, BLFT}; //Back
+set <struct servo> Lt {FLH, FLT, FLFT, CLH, CLT, CLFT, BLH, BLT, BLFT}; //Left
+set <struct servo> Rt {FRH, FRH, FRFT, CRH, CRT, CRFT, CRH, CRT, CRFT}; //Right
+set <struct servo> grpA {FRH, FRT, FRFT, CLH, CLT, CLFT, BRH, BRT, BRFT}; //Group A
+set <struct servo> grpB {FLH, FLT, FLFT, CRH, CRT, CRFT, BLH, BLT, BLFT}; //Group B
+
+
+
+
+/* class movement
 {
 public:
 	movement();
@@ -70,3 +70,4 @@ movement::movement()
 movement::~movement()
 {
 }
+*/
