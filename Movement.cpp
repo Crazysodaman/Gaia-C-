@@ -3,7 +3,28 @@
 #include <set>
 using namespace std;
 
-
+/*
+   Abb. for naming 
+  F- Front  H- Hip
+  C- Center T- Thigh
+  B- Back   FT- Foot
+  L- LefT   R- Right
+ 
+  Servo and Numbers
+   FRH-8   FLH-24
+   FRT-7   FLT-23
+   FRFT-6  FLFT-22
+   CRH-5   CLH-21
+   CRT-4   CLT-20
+   CRFT-3  CLFT-19
+   BRH-2   BLH-18
+   BRT-1   BLT-17
+   BRFT-0  BLFT-16
+   
+      Leg Groups
+A (8,7,6),(21,20,19),(2,1,0)
+B (24,23,22),(5,4,3),(18,17,16) 
+*/
 
 struct servo {  //  sets struct for servo data
     int srvo;   //  servo number
