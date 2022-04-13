@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-using namespace std
+using namespace std;
 /*
    Abb. for naming 
   F- Front  H- Hip
@@ -24,13 +24,13 @@ A (8,7,6),(21,20,19),(2,1,0)
 B (24,23,22),(5,4,3),(18,17,16) 
 */
 
-struct servo {
-  int srvo;
-  int center;
-  int smax;
-  int smin;
-  char grp;
-  bool wkng;
+struct servo {  //  sets struct for servo data
+    int srvo;   //  servo number
+    int center; //  center postion
+    int smax;   //  servo max postion
+    int smin;   //  servo min postion
+    char grp;   //  Gait group (A or B)
+    bool wkng;  //  if the servo is working properly
 };
 
 struct servo FRH {8, 1500, 2000, 750, 'A', true};
@@ -51,3 +51,22 @@ struct servo BRT {1, 1500, 2000, 750, 'A', true};
 struct servo BLT {17, 1500, 2000, 750, 'B', true};
 struct servo BRFT {0, 1500, 2000, 750, 'A', true};
 struct servo BLFT {16, 1500, 2000, 750, 'B', true};
+
+class movement
+{
+public:
+	movement();
+	~movement();
+   void posfilter();
+
+private:
+
+};
+
+movement::movement()
+{
+}
+
+movement::~movement()
+{
+}
