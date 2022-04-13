@@ -39,6 +39,7 @@ struct servo {  //  sets struct for servo data
         return 0;
     }
 };
+int main () {
 
 struct servo FRH {8, 1500, 2000, 750, 'A', true};
 struct servo FLH {24, 1500, 2000, 750, 'B', true};
@@ -92,3 +93,7 @@ movement::~movement()
 {
 }
 */
+
+	
+return 0;
+}
