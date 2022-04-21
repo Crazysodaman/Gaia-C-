@@ -3,6 +3,7 @@
 #include <set>
 #include <algorithm>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -35,13 +36,27 @@ struct servo {  //  sets struct for servo data
     int smax;   //  servo max postion
     int smin;   //  servo min postion
     char grp;   //  Gait group (A or B)
-    bool wkng;  //  if the servo is working properly
+    int wkng;  //  if the servo is working properly
 
-    bool operator<(const servo&) const //not sure why this works but will look into it DO NOT REMOVE
+    bool operator <(const servo&) const //not sure why this works but will look into it DO NOT REMOVE
     {
         return 0;
     }
 };
+
+int readstructservo (servo &sd, int ty) {
+    switch (ty){
+        case 1:
+        return sd.srvo;
+        break;
+        case 2:
+        return sd.wkng;
+    };
+   return 0;
+}
+
+
+
 int main() {
 
     struct servo FRH { 8, 1500, 2000, 750, 'A', true };
@@ -74,12 +89,13 @@ int main() {
     set <struct servo> grpA{ FRH, FRT, FRFT, CLH, CLT, CLFT, BRH, BRT, BRFT }; //Group A
     set <struct servo> grpB{ FLH, FLT, FLFT, CRH, CRT, CRFT, BLH, BLT, BLFT }; //Group B
 
-    vector <char> legset;
+    //vector <char> legset;
 
-    set_intersection(grpA.begin(), grpA.end(), Hp.begin(), Hp.end(), legset);
+    //set_intersection(grpA.begin(), grpA.end(), Hp.begin(), Hp.end(), legset);
 
-    cout << 'legset';
-
+    //cout << 'legset';
+    FRH.wkng = true;
+    cout <<readstructservo(FRH, 2);
 
     return 0;
 }
